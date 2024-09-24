@@ -225,7 +225,7 @@ function autoUpgrade()
 		local unitsInMap = workspace.Units
 		local wave = game:GetService("Players").LocalPlayer.PlayerGui.HUD.Map.WavesAmount
 
-		if tonumber(wave.Text) >= 9 then
+		if tonumber(wave.Text) >= waveSelectedUpgrade then
 			for i, v in pairs(unitsInMap:GetChildren()) do
 				local args = {
 					[1] = "Upgrade",
@@ -245,7 +245,7 @@ function autoSell()
 		local unitsInMap = workspace.Units
 		local wave = game:GetService("Players").LocalPlayer.PlayerGui.HUD.Map.WavesAmount
 
-		if tonumber(wave.Text) >= 9 then
+		if tonumber(wave.Text) >= waveSelectedSell then
 			for i, v in pairs(unitsInMap:GetChildren()) do
 				local args = {
 					[1] = "Sell",
